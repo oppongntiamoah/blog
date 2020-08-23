@@ -16,6 +16,9 @@ INSTALLED_APPS = [
     # local apps
     'user',
     'post',
+
+    # packages
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
