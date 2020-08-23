@@ -1,0 +1,31 @@
+{% extends '_base.html' %}
+
+{% block title %}Ntiamoah | {{ post.title }} {% endblock title %}
+
+{% block content %}
+<br /><br /><br /><br />
+
+<center>
+
+<div class="post-heading ">
+    <h1>{{ post.title }}</h1>
+    <span class="meta">Posted by&nbsp;<a href="#">{{post.author|capfirst}} on {{post.publish|date}}<a/></span>
+    </div>
+
+</center>
+
+<article>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center
+                        because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+{% endblock content %}

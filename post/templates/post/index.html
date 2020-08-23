@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+
+{% block content %}
+    <div class="container" style="margin-top: 69px;">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                {% for post in posts %}
+                <div class="post-preview">
+                    <a href="{{ post.get_absolute_url }}">
+                        <h2 class="post-title">{{post.title}}</h2>
+                        <h3 class="post-subtitle">{{post.body|truncatewords_html:8}}</h3>
+                    </a>
+                    <p class="post-meta">Posted by&nbsp;<a href="#">{{post.author|capfirst}} on {{post.publish|date}}</a></p>
+                </div>
+                <hr>
+                {% endfor %}
+                <div class="clearfix"><button class="btn btn-primary float-right" type="button">Older Posts&nbsp;⇒</button></div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+    
